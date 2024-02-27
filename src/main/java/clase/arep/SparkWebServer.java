@@ -8,8 +8,8 @@ public class SparkWebServer {
         staticFiles.location("/static");
         get("/hello", (req,res) -> "Hello Docker!" );
         get("/calculadora", (req,res) -> Serial.generateRespone(req.queryParams("val")));
-        get("/palindromo", (req,res) ->  "");
-        get("/vector", (req,res) ->  "");
+        get("/palindromo", (req,res) -> Serial.palindromo(req.queryParams("val")) ? "true" : "false");
+        get("/vector", (req,res) ->  Serial.vector(req.queryParams("val")));
   }
 
 
