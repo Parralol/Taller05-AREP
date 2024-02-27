@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Form Example</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <h1>Calculadora de senos y cosenos</h1>
+    <form action="/calculadora">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" value="John"><br><br>
+        <input type="button" value="Submit" onclick="loadGetMsg()">
+    </form>
+    <div id="getrespmsg"></div>
+
+    <script>
+        function loadGetMsg() {
+            let nameVar = document.getElementById("name").value;
+            const xhttp = new XMLHttpRequest();
+            xhttp.onload = function () {
+                document.getElementById("getrespmsg").innerHTML =
+                    this.responseText;
+            }
+            xhttp.open("GET", "/calculadora?val=" + nameVar);
+            xhttp.send();
+        }
+    </script>
+
+<h1>Determinar si una cadena es palindromo</h1>
+<form action="/palindromo">
+    <label for="name">Name:</label><br>
+    <input type="text" id="name" name="name" value="John"><br><br>
+    <input type="button" value="Submit" onclick="loadGetMsg()">
+</form>
+<div id="getrespmsg"></div>
+
+<script>
+    function loadGetMsg() {
+        let nameVar = document.getElementById("name").value;
+        const xhttp = new XMLHttpRequest();
+        xhttp.onload = function () {
+            document.getElementById("getrespmsg").innerHTML =
+                this.responseText;
+        }
+        xhttp.open("GET", "/palindromo?val=" + nameVar);
+        xhttp.send();
+    }
+</script>
+
+
+<h1>Magnitud de un vector real</h1>
+<form action="/vector">
+    <label for="name">Name:</label><br>
+    <input type="text" id="name" name="name" value="John"><br><br>
+    <input type="button" value="Submit" onclick="loadGetMsg()">
+</form>
+<div id="getrespmsg"></div>
+
+<script>
+    function loadGetMsg() {
+        let nameVar = document.getElementById("name").value;
+        const xhttp = new XMLHttpRequest();
+        xhttp.onload = function () {
+            document.getElementById("getrespmsg").innerHTML =
+                this.responseText;
+        }
+        xhttp.open("GET", "/vector?val=" + nameVar);
+        xhttp.send();
+    }
+</script>
+
+</body>
+
+</html>

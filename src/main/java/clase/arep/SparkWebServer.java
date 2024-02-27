@@ -5,9 +5,11 @@ import static spark.Spark.*;
 public class SparkWebServer {
     public static void main(String... args){
         port(getPort());
+        staticFiles.location("/static");
         get("/hello", (req,res) -> "Hello Docker!" );
-        get("/", (req,res) -> "Hello Docker!" );
-        get("/calculadora", (req,res) -> "");
+        get("/calculadora", (req,res) -> Serial.generateRespone(req.queryParams("val")));
+        get("/palindromo", (req,res) ->  "");
+        get("/vector", (req,res) ->  "");
   }
 
 
