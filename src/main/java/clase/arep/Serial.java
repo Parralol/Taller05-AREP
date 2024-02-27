@@ -27,7 +27,6 @@ public class Serial {
 
     public static boolean palindromo(String palabra){
         int i = 0, j = palabra.length() - 1;
-
         while (i < j) {
             if (palabra.charAt(i) != palabra.charAt(j))
                 return false;
