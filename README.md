@@ -54,6 +54,14 @@ luego ejecutar
 
 ![image](https://github.com/Parralol/Taller05-AREP/assets/110953563/493963d2-69dc-443a-a4b1-6ae2d7dc2068)
 
+## uso
+
+Debes de usar:
+
+> mvn clean-install
+
+luego ejecutar desde tu IDE de confianza
+
 ## REQUERIMIENTOS
 
 *  docker
