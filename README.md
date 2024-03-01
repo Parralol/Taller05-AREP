@@ -33,12 +33,22 @@ Se busco la mayor modularidad posible usando clases simples, ademas de esto grac
 
 ## Generar imagenes
 
+### Primer paso
+
+Copiar el repo de git
+
+
 
 ## Docker
 
 https://hub.docker.com/repository/docker/parralol/firstprkwebapprepo/general
 
 > docker pull parralol/firstprkwebapprepo:latest
+
+luego ejecutar
+
+> docker run --name app1 -p 80:8080 -d parralol/firstprkwebapprepo:latest
+
 
 ## prueba funcional
 
